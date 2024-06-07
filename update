@@ -1,0 +1,8 @@
+#!/bin/bash
+pro=""
+for arg in $@
+do
+	pro="$pro $arg"
+done
+echo $pro
+sed -i "/^#endif/i $pro" binary_trees.h
